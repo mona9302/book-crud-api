@@ -27,6 +27,7 @@ public class BookServiceImpl implements IBookService {
 		Books book = new Books();
 		BeanUtils.copyProperties(books, book);
 		Books save = repo.save(book);
+		System.out.println(save);
 		
 		BookResponseDto response = new BookResponseDto();
 		BeanUtils.copyProperties(save,response);
